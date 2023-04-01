@@ -39,6 +39,6 @@ if st.button("Play"):
     result, computer_choice = play_game(player_choice)
     st.write(f"You chose {player_choice}, and the computer chose {computer_choice}.")
     if result == "you win!":
-        st.success(result,,icon=)
-    if result == "you lose!":
-        st.
+        st.success(result,icon="😚")
+    elif result == "You lose!":
+        st.error(result,icon="🤖")
