@@ -18,27 +18,38 @@ def play_game(player_choice):
     elif player_choice == "scissors" and computer_choice == "lizard":
         result = "You win!"
     elif player_choice == "spock" and computer_choice == "rock":
-        result = "you win!"
+        result = "You win!"
     elif player_choice == "spock" and computer_choice == "scissors":
-        result = "you win!"
+        result = "You win!"
     elif player_choice == "lizard" and computer_choice == "spock":
-        result = "you win!"
+        result = "You win!"
     elif player_choice == "lizard" and computer_choice == "paper":
-        result = "you win!"
+        result = "You win!"
     else:
         result = "You lose!"
     return result, computer_choice
 
-# Set up the UI
-st.title("Rock-Paper-Scissors Game")
 
+st.title("Rock-Paper-Scissors Game")
+counter_win=0
+counter_lose=0
+counter_draw=0
 options = ["rock", "paper", "scissors","spock","lizard"]
 player_choice = st.radio("Choose your move:", options)
 
 if st.button("Play"):
     result, computer_choice = play_game(player_choice)
     st.write(f"You chose {player_choice}, and the computer chose {computer_choice}.")
-    if result == "you win!":
-        st.success(result,icon="😚")
+    if result == "You win!":
+        st.success(result, icon="🎉")
+        counter_win+=1
     elif result == "You lose!":
-        st.error(result,icon="🤖")
+        st.error(result, icon="👎")
+        counter_lose+=1
+    else:
+        st.warning(result, icon="🤔")
+        counter_draw+=1
+
+    
+if st.button("Reset"):
+    st.experimental_rerun()
