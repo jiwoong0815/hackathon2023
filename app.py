@@ -32,10 +32,13 @@ def play_game(player_choice):
 # Set up the UI
 st.title("Rock-Paper-Scissors Game")
 
-options = ["rock", "paper", "scissors"]
+options = ["rock", "paper", "scissors","spock","lizard"]
 player_choice = st.radio("Choose your move:", options)
 
 if st.button("Play"):
     result, computer_choice = play_game(player_choice)
     st.write(f"You chose {player_choice}, and the computer chose {computer_choice}.")
-    st.write(result)
+    if result == "you win!":
+        st.success(result,,icon=)
+    if result == "you lose!":
+        st.
