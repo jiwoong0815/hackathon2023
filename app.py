@@ -1,4 +1,4 @@
-import streamlit as sp
+import streamlit as st
 import random
 
 # Define the game logic
