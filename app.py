@@ -1,39 +1,39 @@
 import streamlit as st
 import random
-
+ 
 def play_game(player_choice):
-    computer_choice = random.choice(["rock", "paper", "scissors","spock","lizard"])
+    computer_choice = random.choice(["🪨rock", "🏳paper", "✂scissors","🖖Spock","🦎lizard"])
     if player_choice == computer_choice:
         result = "It's a tie!"
         return result, computer_choice, "Draw"
-    elif player_choice == "rock" and computer_choice == "scissors":
+    elif player_choice == "🪨rock" and computer_choice == "✂scissors":
         result = "You win!"
         return result, computer_choice, "Win"
-    elif player_choice == "rock" and computer_choice == "lizard":
+    elif player_choice == "🪨rock" and computer_choice == "🦎lizard":
         result = "You win!"
         return result, computer_choice, "Win"
-    elif player_choice == "paper" and computer_choice == "rock":
+    elif player_choice == "🏳paper" and computer_choice == "🪨rock":
         result = "You win!"
         return result, computer_choice, "Win"
-    elif player_choice == "paper" and computer_choice == "spock":
+    elif player_choice == "🏳paper" and computer_choice == "🖖Spock":
         result = "You win!"
         return result, computer_choice, "Win"
-    elif player_choice == "scissors" and computer_choice == "paper":
+    elif player_choice == "✂scissors" and computer_choice == "🏳paper":
         result = "You win!"
         return result, computer_choice, "Win"
-    elif player_choice == "scissors" and computer_choice == "lizard":
+    elif player_choice == "✂scissors" and computer_choice == "🦎lizard":
         result = "You win!"
         return result, computer_choice, "Win"
-    elif player_choice == "spock" and computer_choice == "rock":
+    elif player_choice == "🖖Spock" and computer_choice == "🪨rock":
         result = "You win!"
         return result, computer_choice, "Win"
-    elif player_choice == "spock" and computer_choice == "scissors":
+    elif player_choice == "🖖Spock" and computer_choice == "✂scissors":
         result = "You win!"
         return result, computer_choice, "Win"
-    elif player_choice == "lizard" and computer_choice == "spock":
+    elif player_choice == "🦎lizard" and computer_choice == "🖖Spock":
         result = "You win!"
         return result, computer_choice, "Win"
-    elif player_choice == "lizard" and computer_choice == "paper":
+    elif player_choice == "🦎lizard" and computer_choice == "🏳paper":
         result = "You win!"
         return result, computer_choice, "Win"
     else:
@@ -41,9 +41,12 @@ def play_game(player_choice):
         return result, computer_choice, "Lose"
 
 # Set up the UI
-st.title("Rock-Paper-Scissors Game")
+st.title("Rock-Paper-Scissors-Spock-Lizard Game")
+st.write("""Scissors cuts Paper covers Rock crushes Lizard poisons Spock smashes Scissors
+decapitates Lizard eats Paper disproves Spock vaporizes Rock
+(and as it always has)crushes Scissors""")
 
-options = ["rock", "paper", "scissors","spock","lizard"]
+options = ["🪨rock", "🏳paper", "✂scissors","🖖Spock","🦎lizard"]
 player_choice = st.radio("Choose your move:", options)
 
 if st.button("Play"):
