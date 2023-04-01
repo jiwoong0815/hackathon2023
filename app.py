@@ -1,6 +1,11 @@
 import streamlit as st
+from streamlit_modal import Modal
+import streamlit.components.v1 as components
 import random
- 
+
+st.balloons()
+
+
 def play_game(player_choice):
     computer_choice = random.choice(["🪨rock", "🏳paper", "✂scissors","🖖Spock","🦎lizard"])
     if player_choice == computer_choice:
@@ -41,6 +46,36 @@ def play_game(player_choice):
         return result, computer_choice, "Lose"
 
 # Set up the UI
+st.title("You've made the 5-billionth search!")
+st.write("Congratulations! You may be our next lucky winner!")
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.title("JK")
 st.title("Rock-Paper-Scissors-Spock-Lizard Game")
 st.write("""Scissors cuts Paper covers Rock crushes Lizard poisons Spock smashes Scissors
 decapitates Lizard eats Paper disproves Spock vaporizes Rock
